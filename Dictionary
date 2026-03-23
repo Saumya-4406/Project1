@@ -1,0 +1,22 @@
+students = {}
+
+n = int(input("How many students: "))
+
+for i in range(n):
+    roll_no = input("Enter roll no: ")
+    name = input("Enter student name: ")
+    marks = int(input("Enter marks: "))
+    students[name] = marks
+
+# finding highest marks without using get()
+top_student = ""
+highest = 0
+
+for name in students:
+    if students[name] > highest:
+        highest = students[name]
+        top_student = name
+
+print("Student Marks:", students)
+print("Top Student:", top_student)
+print("Highest Marks:", highest)
