@@ -1,0 +1,24 @@
+queue = []
+
+while True:
+    print("\n1.Insert 2.Delete 3.Display 4.Exit")
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        item = int(input("Enter element: "))
+        queue.append(item)
+
+    elif choice == 2:
+        if len(queue) == 0:
+            print("Queue is empty")
+        else:
+            print("Deleted:", queue.pop(0))
+
+    elif choice == 3:
+        print("Queue:", queue)
+
+    elif choice == 4:
+        break
+
+    else:
+        print("Invalid choice")
